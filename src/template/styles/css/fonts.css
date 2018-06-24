@@ -1,3 +1,25 @@
 /* Including fonts */
 @font-face {
-  src: url("../../fonts/"); }
+  src: url("../../fonts/Geometria-Light.otf");
+  font-family: 'Geometria';
+  font-weight: 300; }
+
+@font-face {
+  src: url("../../fonts/Geometria.otf");
+  font-family: 'Geometria';
+  font-weight: 400; }
+
+@font-face {
+  src: url("../../fonts/Geometria-Medium.otf");
+  font-family: 'Geometria';
+  font-weight: 500; }
+
+@font-face {
+  src: url("../../fonts/Geometria-Bold.otf");
+  font-family: 'Geometria';
+  font-weight: 700; }
+
+@font-face {
+  src: url("../../fonts/Montserrat-Regular.otf");
+  font-family: 'Montserrat';
+  font-weight: 400; }
