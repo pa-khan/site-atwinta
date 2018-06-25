@@ -8,7 +8,7 @@ $(document).ready(function($) {
 		scrollOverflow: true,
 		navigation: true,
 		responsiveWidth: 992,
-		responsiveHeight: 710,
+		responsiveHeight: 630,
 		touchSensitivity: 100
 	});
 
@@ -20,38 +20,55 @@ $(document).ready(function($) {
 			fpNav = $('#fp-nav'),
 			hiddenNav = $('.hidden-nav'),
 			order = $('.order'),
-			body = $('body');
+			body = $('body'),
+			bgPanel = $('.bg-panel');
 
 	function popupToggle() {
 		bgLeft.toggleClass('w50p');
 		bgRight.toggleClass('w50p');
 		nav.toggle();
 		fpNav.toggle();
+		bgPanel.toggle();
 		fullpageWrap.toggleClass('blur');
-		body.toggleClass('body_open-nav');
 	}
 
 	navBtn.click(function(event) {
 		body.removeClass('body_open-order');
-		if (order.hasClass('order_toggle')) {
-			order.removeClass('order_toggle');
-		} else{
+		if (!(navBtn.hasClass('mobile-btn_no-open'))) {
+			if (order.hasClass('order_toggle')) {
+				navBtn.toggleClass('mobile-btn_toggle');
+				order.removeClass('order_toggle');
+			} else{
+				popupToggle(navBtn);
+			}
+			navBtn.toggleClass('mobile-btn_toggle');
+			hiddenNav.toggleClass('hidden-nav_toggle');
+			body.toggleClass('body_open-nav');
+		} else {
+			navBtn.toggleClass('mobile-btn_toggle');
+			navBtn.removeClass('mobile-btn_no-open');
+			hiddenNav.removeClass('hidden-nav_toggle');
 			popupToggle(navBtn);
+			order.toggleClass('order_toggle');
 		}
-		$(this).toggleClass('mobile-btn_toggle');
 		
-		hiddenNav.toggleClass('hidden-nav_toggle');
 	});
 	
 	$('.order-btn').click(function(event) {
+		body.removeClass('body_open-nav');
 		body.toggleClass('body_open-order');
-		if (navBtn.hasClass('mobile-btn_toggle')) {
-			navBtn.removeClass('mobile-btn_toggle');
-			hiddenNav.removeClass('hidden-nav_toggle')
-		} else {
-			popupToggle(navBtn);
+		navBtn.toggleClass('mobile-btn_no-open');
+		navBtn.toggleClass('mobile-btn_toggle');
+		if (!(navBtn.hasClass('mobile-btn_no-open'))) {
+			navBtn.removeClass('mobile-btn_toggle').removeClass('mobile-btn_no-open');
+			hiddenNav.removeClass('hidden-nav_toggle');
 		}
-		
+		if (!(body.hasClass('body_open-nav')) && $(window).width() <= 976) {
+			popupToggle(navBtn);
+			hiddenNav.removeClass('hidden-nav_toggle');
+			navBtn.addClass('mobile-btn_toggle');
+		}
+		popupToggle(navBtn);
 		order.toggleClass('order_toggle');
 	});
 

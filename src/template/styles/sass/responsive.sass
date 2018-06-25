@@ -47,9 +47,15 @@
 		&__title
 			top: 0
 			margin-bottom: 0
+
+	.bg-panel
+		height: 90px
 			
 @media screen and (max-height: 710px), screen and (max-width: 1145px)
+	.section
+		
 	.main-slide
+		padding-top: 0
 		&__main-title
 			top: 90px
 			svg
@@ -67,6 +73,8 @@
 	.slide-count
 		bottom: 41px
 			
+		
+
 
 	.order-btn, .citys-phones, .nav, .mobile-btn, .logo
 		position: fixed
@@ -113,6 +121,7 @@
 	.title
 		position: relative
 		top: 0
+		font-size: 72px
 
 	.content
 		padding-top: 10px
@@ -127,6 +136,7 @@
 	.awards__content
 		padding-top: 0 !important
 	.awards__year
+		display: none
 		top: 50%
 		margin-top: 0
 		padding-left: 20px
@@ -149,8 +159,7 @@
 		&__text
 			margin-bottom: 15px
 
-	.works, .works .fp-tableCell, .works .fp-scrollable
-		height: auto !important
+	
 			
 	
 	.nav-block
@@ -159,8 +168,20 @@
 
 	.hidden-nav
 		position: fixed
+	.awards__title
+		margin-bottom: 10px
+	.top__text, .award__text, .award__title, .awards__list
+		margin-bottom: 10px
 
-	.order
+	.services, .contacts
+		padding-top: 43px
+	
+	.works
+		padding-top: 95px
+@media screen and (max-height: 630px), screen and (max-width: 1145px)
+	.works, .works .fp-tableCell, .works .fp-scrollable
+		height: auto !important
+
 @media screen and (max-height: 515px), screen and (max-width: 940px)
 	.main-slide__wrap
 		min-height: 280px
@@ -351,6 +372,8 @@
 	.bg-right
 		width: 230px
 
+	.bg-panel
+		right: 230px
 	.order-btn
 		width: 190px
 		right: 18px
@@ -637,8 +660,14 @@
 			margin-right: auto
 				
 	.body_open-order
+		.logo
+			display: block
+			left: 30px
+			top: 12px
 		.citys-phones, .order-btn
 			display: none
+
+
 
 	.order
 		margin-right: 10px
@@ -663,6 +692,8 @@
 	.input__title
 		font-size: 14px
 
+	.bg-panel
+		display: none !important
 			
 @media screen and (max-width: 480px)
 	.works

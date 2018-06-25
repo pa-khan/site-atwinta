@@ -32,19 +32,23 @@
     margin-top: 70px; }
     .order__title {
       top: 0;
-      margin-bottom: 0; } }
+      margin-bottom: 0; }
+  .bg-panel {
+    height: 90px; } }
 
 @media screen and (max-height: 710px), screen and (max-width: 1145px) {
-  .main-slide__main-title {
-    top: 90px; }
-    .main-slide__main-title svg {
+  .main-slide {
+    padding-top: 0; }
+    .main-slide__main-title {
+      top: 90px; }
+      .main-slide__main-title svg {
+        width: 630px;
+        height: auto; }
+    .main-slide__img {
+      margin-left: 0;
       width: 630px;
-      height: auto; }
-  .main-slide__img {
-    margin-left: 0;
-    width: 630px;
-    height: 400px;
-    line-height: 560px; }
+      height: 400px;
+      line-height: 560px; }
   .video-link {
     bottom: 15px; }
   .slide-count {
@@ -80,7 +84,8 @@
     position: fixed; }
   .title {
     position: relative;
-    top: 0; }
+    top: 0;
+    font-size: 72px; }
   .content {
     padding-top: 10px;
     margin-left: 105px; }
@@ -91,6 +96,7 @@
   .awards__content {
     padding-top: 0 !important; }
   .awards__year {
+    display: none;
     top: 50%;
     margin-top: 0;
     padding-left: 20px;
@@ -108,12 +114,22 @@
     padding-right: 15px; }
   .services__text {
     margin-bottom: 15px; }
-  .works, .works .fp-tableCell, .works .fp-scrollable {
-    height: auto !important; }
   .nav-block {
     display: none; }
   .hidden-nav {
-    position: fixed; } }
+    position: fixed; }
+  .awards__title {
+    margin-bottom: 10px; }
+  .top__text, .award__text, .award__title, .awards__list {
+    margin-bottom: 10px; }
+  .services, .contacts {
+    padding-top: 43px; }
+  .works {
+    padding-top: 95px; } }
+
+@media screen and (max-height: 630px), screen and (max-width: 1145px) {
+  .works, .works .fp-tableCell, .works .fp-scrollable {
+    height: auto !important; } }
 
 @media screen and (max-height: 515px), screen and (max-width: 940px) {
   .main-slide__wrap {
@@ -267,6 +283,8 @@
     left: 570px; }
   .bg-right {
     width: 230px; }
+  .bg-panel {
+    right: 230px; }
   .order-btn {
     width: 190px;
     right: 18px; }
@@ -503,6 +521,10 @@
     bottom: 15px;
     margin-left: auto;
     margin-right: auto; }
+  .body_open-order .logo {
+    display: block;
+    left: 30px;
+    top: 12px; }
   .body_open-order .citys-phones, .body_open-order .order-btn {
     display: none; }
   .order {
@@ -525,7 +547,9 @@
     .order__textarea {
       max-width: 100%; }
   .input__title {
-    font-size: 14px; } }
+    font-size: 14px; }
+  .bg-panel {
+    display: none !important; } }
 
 @media screen and (max-width: 480px) {
   .works__text {
